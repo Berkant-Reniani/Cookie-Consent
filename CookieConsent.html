@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookieConsent</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0px;
+    }
+
+    .box {
+        width: 285px;
+        height: 320px;
+        background-color: black;
+        border-radius: 15px;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .cookie-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 30px;
+        left: 30px;
+    }
+
+    .text {
+        margin-top: 90px;
+        color: white;
+        font-size: 20px;
+        padding: 55px 50px 10px 30px;
+    }
+
+    .accept-btn {
+
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        padding: 15px 50px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+
+    function closeCookie() {
+        const banner = document.querySelector(".box");
+        banner.style.display = "none"
+    }
+
+    function acceptCookie() {
+        const banner = document.querySelector(".box");
+        banner.style.display = "none"
+    }
+
+</script>
+
+<body>
+
+    <div class="box">
+
+        <button class="close-btn" onclick="closeCookie()" data-cookie="closeCookie">x</button>
+
+        <div class="cookie-content">
+            <img src="cookie.png">
+            <p class="text">
+                We use cookies to improve your user experience.
+            </p>
+            <button class="accept-btn" onclick="acceptCookie()" data-cookie="acceptCookie">
+                I like Cookies
+            </button>
+        </div>
+
+    </div>
+</body>
+
+</html>
